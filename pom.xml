@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.kitteless</groupId>
-    <artifactId>Kitteless-front</artifactId>
+    <artifactId>Kitteless-back</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Kitteless-front</name>
+    <name>Kitteless-back</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>

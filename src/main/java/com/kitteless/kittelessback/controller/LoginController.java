@@ -1,4 +1,4 @@
-package com.kitteless.kittelessfront.controller;
+package com.kitteless.kittelessback.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
