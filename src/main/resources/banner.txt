@@ -1,0 +1,11 @@
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}   o         o/    o     o       o                    o
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}  <|>       /v   _<|>_  <|>     <|>                  <|>
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}  / >      />           < >     < >                  / \
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}  \o__ __o/        o     |       |        o__  __o   \o/    o__  __o       __o__      __o__
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}   |__ __|        <|>    o__/_   o__/_   /v      |>   |    /v      |>     />  \      />  \
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}   |      \       / \    |       |      />      //   / \  />      //      \o         \o
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}  <o>      \o     \o/    |       |      \o    o/     \o/  \o    o/         v\         v\
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}   |        v\     |     o       o       v\  /v __o   |    v\  /v __o       <\         <\
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}  / \        <\   / \    <\__    <\__     <\/> __/>  / \    <\/> __/>  _\o__</    _\o__</
+${AnsiBackground.BRIGHT_BLACK}
+${AnsiBackground.BRIGHT_BLACK}${Ansi.BRIGHT_YELLOW}:: Spring Boot ::${spring-boot.formatted-version}
