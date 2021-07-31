@@ -14,8 +14,8 @@ public class StampService {
 
     public StampAuthorizeResponse stampAuthorize(String userId, String stampCord) {
 
-        Payment payment = paymentRepository.findByStampCord(stampCord);
-        if(!payment.getUserId().equals(userId)) {}
+//        Payment payment = paymentRepository.findByStampCord(stampCord);
+//        if(!payment.getUserId().equals(userId)) {}
 
         StampAuthorizeResponse stampAuthorizeResponse = new StampAuthorizeResponse();
         stampAuthorizeResponse.setResult("success");

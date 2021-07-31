@@ -19,6 +19,6 @@ public class OcrController {
     @PostMapping("/extract")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public OcrResponse extract(String base64EncodedImage) {
-        return ocrService.extract();
+        return ocrService.extract(base64EncodedImage);
     }
 }
