@@ -1,6 +1,7 @@
 package com.kitteless.kittelessback.service;
 
 import com.kitteless.kittelessback.model.OcrResponse;
+import com.kitteless.kittelessback.repository.OcrRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ public class OcrService {
 
         OcrResponse ocrResponse = new OcrResponse();
         ocrResponse.setResult("success");
-        ocrResponse.setValue(result);
+        ocrResponse.setText(result);
         return ocrResponse;
     }
 }

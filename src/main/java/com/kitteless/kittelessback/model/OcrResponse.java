@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class OcrResponse {
     String result;
-    String value;
+    String text;
 }
