@@ -6,11 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class StampService {
     @Autowired
-    //リポジトリを記述
+    PaymentRepository paymentRepository;
 
-    public StampAuthorizeResponse stampAuthorize(String userId, String stampCord){
+    public StampAuthorizeResponse stampAuthorize(String userId, String stampCord) {
 
-        //レコードに保存
+        Payment payment = paymentRepository.findByStampCord(stampCord);
+        if(!payment.getUserId().equals(userId)) {}
 
         StampAuthorizeResponse stampAuthorizeResponse = new StampAuthorizeResponse();
         stampAuthorizeResponse.setResult("success");
