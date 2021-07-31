@@ -1,6 +1,7 @@
 package com.kitteless.kittelessback.controller;
 
 import com.kitteless.kittelessback.model.StampAuthorizeResponse;
+import com.kitteless.kittelessback.model.StampVerifyResponse;
 import com.kitteless.kittelessback.service.StampService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,5 +24,10 @@ public class StampController {
     public StampAuthorizeResponse stampAuthorize(@RequestBody String userId,
                                                  @RequestBody String stampCode){
         return stampService.stampAuthorize(userId, stampCode);
+    }
+
+    @PostMapping("/verify")
+    public StampVerifyResponse verify(@RequestBody String image) {
+        return stampService.stampVerify(image);
     }
 }
