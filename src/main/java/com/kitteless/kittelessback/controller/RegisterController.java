@@ -1,5 +1,6 @@
 package com.kitteless.kittelessback.controller;
 
+import com.kitteless.kittelessback.model.User;
 import com.kitteless.kittelessback.service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
