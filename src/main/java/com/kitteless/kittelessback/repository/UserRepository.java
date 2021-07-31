@@ -9,13 +9,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-interface UserRepository extends JpaRepository<String, User> {
-    // TODO DB ユーザテーブル 作成 #1 で考える
+public interface UserRepository extends JpaRepository<String, User> {
     @Query(
-            value = "INSERT INTO user(name) VALUES (:name)",
+            value = "INSERT INTO user(id, name, password) VALUES (:id, :name, :password)",
             nativeQuery = true
     )
     String insert(
-            @Param("name") String name
+            @Param("id") String id,
+            @Param("name") String name,
+            @Param("password") String password
     );
 }

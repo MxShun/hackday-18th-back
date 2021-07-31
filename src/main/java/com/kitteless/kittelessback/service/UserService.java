@@ -12,7 +12,9 @@ public class UserService {
 
     public String register(User user) {
         return userRepository.insert(
-            user.getName()
+                user.getId(),
+                user.getName(),
+                user.getPassword()
         );
     }
 }
