@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-public
 interface UserRepository extends JpaRepository<String, User> {
     // TODO DB ユーザテーブル 作成 #1 で考える
     @Query(
