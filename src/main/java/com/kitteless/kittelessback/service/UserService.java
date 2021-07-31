@@ -1,5 +1,6 @@
 package com.kitteless.kittelessback.service;
 
+import com.kitteless.kittelessback.model.LoginResponse;
 import com.kitteless.kittelessback.model.RegisterResponse;
 import com.kitteless.kittelessback.model.User;
 import com.kitteless.kittelessback.repository.UserRepository;
@@ -18,5 +19,13 @@ public class UserService {
         RegisterResponse registerResponse = new RegisterResponse();
         registerResponse.setResult("success");
         return registerResponse;
+    }
+
+    public LoginResponse login(User user) {
+        String userId = userRepository.getUserid(user.getName(),user.getPassword());
+
+        LoginResponse loginResponse = new LoginResponse();
+        loginResponse.setUserId(userId);
+        return loginResponse;
     }
 }

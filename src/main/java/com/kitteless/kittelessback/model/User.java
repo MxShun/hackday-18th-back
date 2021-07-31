@@ -23,4 +23,9 @@ public class User {
 
     @Column(name = "password")
     private String password;
+
+    public void setRandomId() {
+        // userIdを 10,000～99,999 で発番する
+        id = Integer.toString(new Random().nextInt(89_999) + 10_000);
+    }
 }
