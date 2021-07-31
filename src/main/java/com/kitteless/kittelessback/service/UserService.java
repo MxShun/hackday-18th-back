@@ -22,7 +22,7 @@ public class UserService {
     }
 
     public LoginResponse login(User user) {
-        String userId = userRepository.getUserid(user.getName(),user.getPassword());
+        String userId = userRepository.getUserid(user.getName(), user.getPassword());
 
         LoginResponse loginResponse = new LoginResponse();
         loginResponse.setUserId(userId);
