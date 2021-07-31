@@ -12,12 +12,12 @@ public class Payment {
     @Column(name = "id")
     private String id;
 
-    @Column(name = "userId")
+    @Column(name = "user_id")
     private String userId;
 
     @Column(name = "amount")
     private int amount;
 
-    @Column(name = "stampCode")
+    @Column(name = "stamp_code")
     private String stampCode;
 }

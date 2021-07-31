@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS kitteless.user
 CREATE TABLE IF NOT EXISTS kitteless.payment
 (
     id       INT PRIMARY KEY AUTO_INCREMENT,
-    userId   VARCHAR(30) NOT NULL,
-    amount   INT NOT NULL
+    user_id   VARCHAR(5) NOT NULL,
+    amount   INT NOT NULL,
+    stamp_code VARCHAR(9)
 );

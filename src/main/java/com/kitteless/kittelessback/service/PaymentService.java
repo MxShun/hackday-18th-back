@@ -21,7 +21,8 @@ public class PaymentService {
         paymentRepository.save(payment);
 
         PaymentResponse paymentResponse = new PaymentResponse();
-        paymentResponse.setResult("success");
+        paymentResponse.setStampCode(stampCode);
+        paymentResponse.setPaymentResult("success");
         return paymentResponse;
     }
 
