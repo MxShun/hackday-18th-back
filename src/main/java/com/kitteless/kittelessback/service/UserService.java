@@ -21,13 +21,11 @@ public class UserService {
     }
 
     public LoginResponse login(User user) {
-        User loginUser = userRepository.findByPassword(user.getPassword());
-
-        //失敗時の処理
+        String id = userRepository.getUserid(user.getName(),user.getPassword());
 
         LoginResponse loginResponse = new LoginResponse();
-        loginResponse.setResult("success");
-        loginResponse.setId(loginUser.getId());
+        loginResponse.setResult("true");
+        loginResponse.setId(id);
         return loginResponse;
     }
 }
