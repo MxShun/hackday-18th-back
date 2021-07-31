@@ -1,7 +1,6 @@
 package com.kitteless.kittelessback.model;
 
 import lombok.Data;
-
 import javax.persistence.*;
 
 @Entity
