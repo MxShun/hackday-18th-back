@@ -1,5 +1,6 @@
 package com.kitteless.kittelessback.controller;
 
+import com.kitteless.kittelessback.model.Payment;
 import com.kitteless.kittelessback.model.PaymentResponse;
 import com.kitteless.kittelessback.service.PaymentService;
 import com.kitteless.kittelessback.service.UserService;
@@ -23,3 +24,4 @@ public class PaymentController {
     public PaymentResponse payment(@RequestBody Payment payment) {
         return paymentService.payment(payment);
     }
+}

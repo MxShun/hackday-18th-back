@@ -17,4 +17,7 @@ public class Payment {
 
     @Column(name = "amount")
     private int amount;
+
+    @Column(name = "stampCode")
+    private String stampCode;
 }
