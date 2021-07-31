@@ -10,8 +10,8 @@ public class OcrService {
     @Autowired
     OcrRepository ocrRepository;
 
-    public OcrResponse extract(String base64EncodedImage) {
-        String result = ocrRepository.read(base64EncodedImage);
+    public OcrResponse extract(String image) {
+        String result = ocrRepository.read(image);
 
         OcrResponse ocrResponse = new OcrResponse();
         ocrResponse.setResult("success");
