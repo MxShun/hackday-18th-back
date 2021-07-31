@@ -5,11 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class StampService {
     @Autowired
-    //リポジトリを記述
+    PaymentRepository paymentRepository;
 
-    public StampAuthorizeResponse stampAuthorize(String userId, String stampCord){
+    public StampAuthorizeResponse stampAuthorize(String userId, String stampCord) {
 
-        //レコードに保存
+        Payment payment = paymentRepository.findByUserId(userId);
+        if(!payment.getStampCord().equals(stampCord)) {}
 
         StampAuthorizeResponse stampAuthorizeResponse = new StampAuthorizeResponse();
         stampAuthorizeResponse.setResult("success");
