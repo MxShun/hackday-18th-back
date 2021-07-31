@@ -24,7 +24,6 @@ public class UserService {
         String id = userRepository.getUserid(user.getName(),user.getPassword());
 
         LoginResponse loginResponse = new LoginResponse();
-        loginResponse.setResult("true");
         loginResponse.setId(id);
         return loginResponse;
     }

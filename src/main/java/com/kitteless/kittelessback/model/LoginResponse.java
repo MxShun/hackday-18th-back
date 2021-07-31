@@ -4,6 +4,5 @@ import lombok.Data;
 
 @Data
 public class LoginResponse {
-    String result;
     String id;
 }
