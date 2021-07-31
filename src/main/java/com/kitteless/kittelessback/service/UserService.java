@@ -12,6 +12,7 @@ public class UserService {
     UserRepository userRepository;
 
     public RegisterResponse register(User user) {
+        user.setRandomId();
         userRepository.save(user);
 
         RegisterResponse registerResponse = new RegisterResponse();
