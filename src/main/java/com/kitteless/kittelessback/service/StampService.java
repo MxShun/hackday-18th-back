@@ -14,6 +14,7 @@ public class StampService {
 
     public StampAuthorizeResponse stampAuthorize(String userId, String stampCord) {
 
+        // FIXME: findByStampCode が解決しない
 //        Payment payment = paymentRepository.findByStampCord(stampCord);
 //        if(!payment.getUserId().equals(userId)) {}
 

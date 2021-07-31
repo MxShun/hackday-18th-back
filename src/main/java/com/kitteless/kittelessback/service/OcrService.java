@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 public class OcrService {
 
     public OcrResponse extract(String base64EncodedImage) {
+
+        // FIXME: OcrRepository を呼んでないので呼ぶ
+
         OcrResponse ocrResponse = new OcrResponse();
         ocrResponse.setResult("success");
         ocrResponse.setValue("123456789");
