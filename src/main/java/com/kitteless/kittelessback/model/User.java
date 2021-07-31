@@ -23,5 +23,3 @@ public class User {
         id = Integer.toString(new Random().nextInt(89_999) + 10_000);
     }
 }
-
-
