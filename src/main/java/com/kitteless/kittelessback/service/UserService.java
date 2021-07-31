@@ -11,10 +11,7 @@ public class UserService {
     UserRepository userRepository;
 
     public String register(User user) {
-        return userRepository.insert(
-                user.getId(),
-                user.getName(),
-                user.getPassword()
-        );
+        userRepository.save(user);
+        return "success";
     }
 }

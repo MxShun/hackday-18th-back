@@ -1,8 +1,6 @@
-DELETE TABLE user
-
-CREATE TABLE user
+CREATE TABLE IF NOT EXISTS kitteless.user
 (
-    id       VARCHAR(5) PRIMARY KEY,
-    name     VARCHAR(30),
-    password VARCHAR(30)
-)
+    id       VARCHAR(5) PRIMARY KEY NOT NULL,
+    name     VARCHAR(30) NOT NULL,
+    password VARCHAR(30) NOT NULL
+);
