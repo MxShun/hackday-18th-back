@@ -8,21 +8,12 @@ import javax.persistence.*;
 @Data
 public class User {
     @Id
-    @Column(
-            name="id",
-            nullable = false
-    )
+    @Column(name = "id")
     private String id;
 
-    @Column(
-            name="name",
-            nullable = false
-    )
+    @Column(name = "name")
     private String name;
 
-    @Column(
-            name="password",
-            nullable = false
-    )
+    @Column(name = "password")
     private String password;
 }
