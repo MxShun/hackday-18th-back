@@ -19,7 +19,7 @@ public class PaymentController {
     PaymentService paymentService;
 
     @PostMapping("/payment")
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.ACCEPTED)
     public PaymentResponse payment(@RequestBody Payment payment) {
         return paymentService.payment(payment);
     }
