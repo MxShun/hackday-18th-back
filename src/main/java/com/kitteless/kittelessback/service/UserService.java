@@ -21,10 +21,10 @@ public class UserService {
     }
 
     public LoginResponse login(User user) {
-        String id = userRepository.getUserid(user.getName(),user.getPassword());
+        String userId = userRepository.getUserid(user.getName(),user.getPassword());
 
         LoginResponse loginResponse = new LoginResponse();
-        loginResponse.setId(id);
+        loginResponse.setUserId(userId);
         return loginResponse;
     }
 }
