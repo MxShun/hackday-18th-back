@@ -18,8 +18,14 @@ public class LoginController {
     @Autowired
     UserService userService;
 
-    @PostMapping(value = "/login")
-    public LoginResponse login(@RequestBody User user) {
+    @GetMapping(value = "/login")
+//    public LoginResponse login(@RequestBody User user) {
+
+    public LoginResponse login() {
+        User user = new User();
+        user.setName("hoge");
+        user.setPassword("fuga");
+
         return userService.login(user);
     }
 }

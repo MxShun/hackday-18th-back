@@ -27,7 +27,7 @@ public class UserService {
 
         LoginResponse loginResponse = new LoginResponse();
         loginResponse.setResult("success");
-        loginResponse.setResult(loginUser.getId());
+        loginResponse.setId(loginUser.getId());
         return loginResponse;
     }
 }
