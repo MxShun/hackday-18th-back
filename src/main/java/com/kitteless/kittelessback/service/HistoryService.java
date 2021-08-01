@@ -12,7 +12,7 @@ public class HistoryService {
 //    @Autowired
 //    PaymentRepository paymentRepository;
 
-    public List<HistoryResponse> getHistory() {
+    public List<HistoryResponse> getHistory(String userId) {
         // TODO Repository実装
 
         HistoryResponse mockHitoryResponse = new HistoryResponse();
