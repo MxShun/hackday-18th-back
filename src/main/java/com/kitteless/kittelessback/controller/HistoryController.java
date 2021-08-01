@@ -17,7 +17,7 @@ public class HistoryController {
 
     @PostMapping("/history")
     @ResponseStatus(HttpStatus.OK)
-    public List<HistoryResponse> getHistory() {
-        return historyService.getHistory();
+    public List<HistoryResponse> getHistory(String userId) {
+        return historyService.getHistory(userId);
     }
 }
