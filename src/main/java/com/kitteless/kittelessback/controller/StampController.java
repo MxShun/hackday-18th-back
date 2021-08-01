@@ -1,5 +1,6 @@
 package com.kitteless.kittelessback.controller;
 
+import com.kitteless.kittelessback.model.StampAuthorizeRequest;
 import com.kitteless.kittelessback.model.StampAuthorizeResponse;
 import com.kitteless.kittelessback.model.StampVerifyResponse;
 import com.kitteless.kittelessback.service.StampService;
@@ -21,9 +22,8 @@ public class StampController {
     StampService stampService;
 
     @PostMapping("/authorize")
-    public StampAuthorizeResponse stampAuthorize(@RequestBody String userId,
-                                                 @RequestBody String stampCode){
-        return stampService.stampAuthorize(userId, stampCode);
+    public StampAuthorizeResponse stampAuthorize(@RequestBody StampAuthorizeRequest request){
+        return stampService.stampAuthorize(request.getUserId(), request.getStampCode());
     }
 
     @PostMapping("/verify")
