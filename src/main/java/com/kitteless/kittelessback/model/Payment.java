@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Payment {
     @Id
     @Column(name = "id")
-    private String id;
+    private int id;
 
     @Column(name = "user_id")
     private String userId;
