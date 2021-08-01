@@ -20,4 +20,7 @@ public class Payment {
 
     @Column(name = "stamp_code")
     private String stampCode;
+
+    @Column(name = "date_time")
+    private String dateTime;
 }
