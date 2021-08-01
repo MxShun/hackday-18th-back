@@ -19,7 +19,6 @@ public class PaymentService {
         // ここで重複ないかのチェックは必要
         payment.setStampCode(stampCode);
 
-        // FIXME: idがnullで渡ってくるのだが、そのときに多分落ちてる？
         paymentRepository.save(payment);
 
         PaymentResponse paymentResponse = new PaymentResponse();
