@@ -18,9 +18,20 @@ public class OcrService {
         OcrRepository ocr = new OcrRepository();
         ClovaOCRResponse response = ocr.read(image);
 
+        if (response == null) {
+            OcrResponse ocrResponse = new OcrResponse();
+            ocrResponse.setResult("failure");
+            return ocrResponse;
+        }
+
         String text = response
                 .getImages().stream().findFirst().get() // 空だと NoSuchElementException
                 .getFields().stream().map(ClovaOCRResponseFields::getInferText).collect(Collectors.joining());
+
+        System.out.println("----OCRRESPONSE----");
+        System.out.println(response.toString());
+        System.out.println("----INFERTEXT----");
+        System.out.println(text);
 
         OcrResponse ocrResponse = new OcrResponse();
         ocrResponse.setResult("success");

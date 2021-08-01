@@ -50,6 +50,7 @@ public class OcrRepository {
             json.put("version", "V2");
             json.put("requestId", UUID.randomUUID().toString());
             json.put("timestamp", System.currentTimeMillis());
+            json.put("lang", "ja");
             JSONObject image = new JSONObject();
             image.put("format", "jpg");
             image.put("name", "demo");

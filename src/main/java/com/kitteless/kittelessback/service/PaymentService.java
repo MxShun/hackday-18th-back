@@ -17,6 +17,7 @@ public class PaymentService {
 
     public PaymentResponse payment(Payment payment) {
         String stampCode = generateStampCode();
+
         // ここで重複ないかのチェックは必要
         payment.setStampCode(stampCode);
 
