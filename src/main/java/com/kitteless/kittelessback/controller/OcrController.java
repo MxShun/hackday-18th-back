@@ -4,12 +4,10 @@ import com.kitteless.kittelessback.model.OcrResponse;
 import com.kitteless.kittelessback.service.OcrService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
- * OCR API
+ * 切手コード解析API
  */
 @RestController
 public class OcrController {
@@ -18,7 +16,7 @@ public class OcrController {
 
     @PostMapping("/extract")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public OcrResponse extract(String base64EncodedImage) {
-        return ocrService.extract(base64EncodedImage);
+    public OcrResponse extract(@RequestBody(required = false) String image) {
+        return ocrService.extract(image);
     }
 }
