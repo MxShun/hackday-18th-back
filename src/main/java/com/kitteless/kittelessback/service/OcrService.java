@@ -15,7 +15,8 @@ public class OcrService {
     OcrRepository ocrRepository;
 
     public OcrResponse extract(String image) {
-        ClovaOCRResponse response = ocrRepository.read(image);
+        OcrRepository ocr = new OcrRepository();
+        ClovaOCRResponse response = ocr.read(image);
 
         String text = response
                 .getImages().stream().findFirst().get() // 空だと NoSuchElementException
