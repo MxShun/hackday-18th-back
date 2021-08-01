@@ -3,7 +3,6 @@ package com.kitteless.kittelessback.controller;
 import com.kitteless.kittelessback.model.Payment;
 import com.kitteless.kittelessback.model.PaymentResponse;
 import com.kitteless.kittelessback.service.PaymentService;
-import com.kitteless.kittelessback.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
