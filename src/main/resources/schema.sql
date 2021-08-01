@@ -12,3 +12,10 @@ CREATE TABLE IF NOT EXISTS kitteless.payment
     amount   INT NOT NULL,
     stamp_code VARCHAR(9)
 );
+
+CREATE TABLE IF NOT EXISTS kitteless.postal_charge
+(
+    id       INT PRIMARY KEY NOT NULL,
+    amount   INT NOT NULL,
+    standard VARCHAR(30)
+);
