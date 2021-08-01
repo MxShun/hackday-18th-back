@@ -109,7 +109,7 @@ public class OcrRepository {
             out.flush();
 
 
-            byte[] bytes = Base64.getMimeDecoder().decode(base64);
+            byte[] bytes = Base64.getDecoder().decode(base64);
 //            try (FileInputStream fis = new FileInputStream(file)) {
 //                byte[] buffer = new byte[8192];
 //                int count;
