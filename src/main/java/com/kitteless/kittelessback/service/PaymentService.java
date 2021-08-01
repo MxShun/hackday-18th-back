@@ -7,6 +7,7 @@ import com.kitteless.kittelessback.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Random;
 
 @Service
@@ -18,6 +19,10 @@ public class PaymentService {
         String stampCode = generateStampCode();
         // ここで重複ないかのチェックは必要
         payment.setStampCode(stampCode);
+
+        // 現在時刻を決済時刻としてDBにインサート
+        LocalDateTime now = LocalDateTime.now();
+        payment.setDateTime(now);
 
         paymentRepository.save(payment);
 
