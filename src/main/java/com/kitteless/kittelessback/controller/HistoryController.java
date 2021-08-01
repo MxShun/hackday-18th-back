@@ -1,14 +1,12 @@
 package com.kitteless.kittelessback.controller;
 
-import com.kitteless.kittelessback.model.HistoryResponse;
+import com.kitteless.kittelessback.model.HistoryList;
 import com.kitteless.kittelessback.service.HistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 public class HistoryController {
@@ -17,7 +15,9 @@ public class HistoryController {
 
     @PostMapping("/history")
     @ResponseStatus(HttpStatus.OK)
-    public List<HistoryResponse> getHistory() {
-        return historyService.getHistory();
+    public HistoryList getHistory(String userId) {
+        HistoryList historyList = new HistoryList();
+        historyList.setHistoryResponseList(historyService.getHistory(userId));
+        return historyList;
     }
 }
