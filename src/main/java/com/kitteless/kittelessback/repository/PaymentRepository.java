@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public interface PaymentRepository extends JpaRepository<Payment, String> {
 
-    @Query("SELECT p FROM Payment p " +
-            "WHERE p.stampCode = :stampCord")
+    @Query("SELECT p FROM Payment p WHERE p.stampCode = :stampCord")
     Payment findByStampCord(String stampCord);
 }
