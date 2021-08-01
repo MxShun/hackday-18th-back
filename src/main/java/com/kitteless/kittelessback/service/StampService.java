@@ -1,5 +1,6 @@
 package com.kitteless.kittelessback.service;
 
+import com.kitteless.kittelessback.model.OcrResponse;
 import com.kitteless.kittelessback.model.Payment;
 import com.kitteless.kittelessback.model.StampAuthorizeResponse;
 import com.kitteless.kittelessback.model.StampVerifyResponse;
@@ -25,13 +26,17 @@ public class StampService {
     public StampVerifyResponse stampVerify(String image) {
 
         // TODO:OCRで画像をもとに9桁の切手コードを取得する
+        OcrService ocrService = new OcrService();
+        OcrResponse ocrResponse = ocrService.extract(image);
 
         // TODO:その切手コードをもとに決済テーブルから対象の決済を取得する
+        Payment payment = paymentRepository.findByStampCord(ocrResponse.getValue());
 
         // TODO:取得結果に応じてreturnする
+        String result = payment.getUserId() == null ? "success" : "failure";
 
         StampVerifyResponse stampVerifyResponse = new StampVerifyResponse();
-        stampVerifyResponse.setResult("success");
+        stampVerifyResponse.setResult(result);
         return stampVerifyResponse;
     }
 }
