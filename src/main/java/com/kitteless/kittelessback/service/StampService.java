@@ -28,7 +28,7 @@ public class StampService {
         OcrService ocrService = new OcrService();
         OcrResponse ocrResponse = ocrService.extract(image);
 
-        Payment payment = paymentRepository.findByStampCord(ocrResponse.getValue());
+        Payment payment = paymentRepository.findByStampCord(ocrResponse.getText());
 
         String result = payment.getUserId() != null ? "success" : "failure";
 
