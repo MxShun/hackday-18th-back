@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS kitteless.payment
     user_id   VARCHAR(5) NOT NULL,
     amount   INT NOT NULL,
     stamp_code VARCHAR(9),
-    date_time DATE
+    date_time DATETIME
 );
 
 CREATE TABLE IF NOT EXISTS kitteless.postal_charge
