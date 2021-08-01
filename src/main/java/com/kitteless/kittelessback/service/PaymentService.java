@@ -32,7 +32,7 @@ public class PaymentService {
     private String generateStampCode(){
         String stampCode = "";
         Random rand = new Random();
-        stampCode = String.format("%09d", rand.nextInt(999999999));
+        stampCode = Integer.toString(new Random().nextInt(899999999) + 100000000);
         return stampCode;
     }
 }
