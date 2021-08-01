@@ -14,12 +14,9 @@ public class OcrController {
     @Autowired
     OcrService ocrService;
 
-    // @GetMapping("/extract")
     @PostMapping("/extract")
     @ResponseStatus(HttpStatus.ACCEPTED)
-//    public OcrResponse extract(String image) {
-//        return ocrService.extract(image);
-    public OcrResponse extract(@RequestBody String image) {
+    public OcrResponse extract(@RequestBody(required = false) String image) {
         return ocrService.extract(image);
     }
 }

@@ -15,14 +15,14 @@ import java.util.UUID;
 @Repository
 public class OcrRepository {
 
-    public String read(String base64EncodedImage) {
+    public ClovaOCRResponse read(String base64EncodedImage) {
         try {
             String response = doPost(base64EncodedImage);
 
             ObjectMapper mapper = new ObjectMapper();
             ClovaOCRResponse clovaOCRResponse = mapper.readValue(response, ClovaOCRResponse.class);
 
-            return clovaOCRResponse.getTimestamp().toString();
+            return clovaOCRResponse;
         } catch (Exception e) {
             // 握りつぶす
         }
