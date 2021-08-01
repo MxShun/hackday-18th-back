@@ -4,5 +4,6 @@ import lombok.Data;
 
 @Data
 public class PaymentResponse {
-    String result;
+    String paymentResult;
+    String stampCode;
 }
