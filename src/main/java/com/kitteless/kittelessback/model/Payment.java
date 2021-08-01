@@ -3,6 +3,7 @@ package com.kitteless.kittelessback.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "payment")
@@ -20,4 +21,7 @@ public class Payment {
 
     @Column(name = "stamp_code")
     private String stampCode;
+
+    @Column(name = "date_time")
+    private LocalDateTime dateTime;
 }
